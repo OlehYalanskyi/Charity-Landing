@@ -148,6 +148,15 @@ body .header-content__link-item:hover svg {
   fill: #1DF2DC;
 }
 
+html .error__text,
+body .error__text {
+  text-align: left;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
 html .themetoggle,
 body .themetoggle {
   display: -webkit-inline-box;
@@ -228,6 +237,15 @@ html.dark .touch-info__title-item,
 html.dark .touch-info__text,
 .dark body .touch-info__text {
   color: #fff;
+}
+
+html.dark .error__text,
+.dark body .error__text {
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 html.dark .touch-form__btn,
