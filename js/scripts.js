@@ -69,3 +69,26 @@ function addDarkClassToHTML() {
 }
 
 addDarkClassToHTML();
+
+const form = document.querySelector('.touch-form');
+const input = document.querySelectorAll('.touch-form__input');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let errors = form.querySelectorAll('.error__text')
+
+    for (let i = 0; i < errors.length; i++) {
+        errors[i].remove()
+    }
+    for (let i = 0; i < input.length; i++) {
+
+        if (!input[i].value) {
+            let error = document.createElement('div')
+            error.className = 'error__text'
+            error.innerHTML = '*This field is required'
+            form[i].parentElement.insertBefore(error, input[i])
+
+        }
+
+    }
+})
